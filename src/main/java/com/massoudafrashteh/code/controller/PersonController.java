@@ -18,7 +18,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping (name = "person")
+@RequestMapping ("/person")
 public class PersonController {
 
 	@Autowired

@@ -18,7 +18,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(name ="/actor")
+@RequestMapping("/actors")
 public class ActorController {
 	@Autowired
 	private IActorService actorService;

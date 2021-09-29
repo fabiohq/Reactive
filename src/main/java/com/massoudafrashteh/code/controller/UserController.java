@@ -18,7 +18,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(name ="user")
+@RequestMapping("/user")
 public class UserController {
 
 	@Autowired

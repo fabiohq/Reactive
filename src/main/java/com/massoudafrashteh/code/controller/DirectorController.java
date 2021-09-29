@@ -18,13 +18,13 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping(name = "director")
+@RequestMapping("/directors")
 public class DirectorController {
 
 	@Autowired
 	private IDirectorService directorService;
 	
-	@PostMapping
+	@PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public Mono<Director> save(@RequestBody Director director) {
         return directorService.save(director);
@@ -35,12 +35,12 @@ public class DirectorController {
         return directorService.findById(id);
     }
 
-    @GetMapping
+    @GetMapping()
     public Flux<Director> findAll() {
         return directorService.findAll();
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public Mono<Void> deleteById(@PathVariable("id") Long id) {
         return directorService.deleteById(id);
     }
